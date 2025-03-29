@@ -12,3 +12,6 @@ def agregar_producto(db: Session, nombre: str, descripcion: str, precio: float, 
 
 def obtener_productos(db: Session):
     return db.query(Producto).all()
+
+def obtener_producto_por_id(db: Session, producto_id: int):
+    return db.query(Producto).filter(Producto.id == producto_id).first()
