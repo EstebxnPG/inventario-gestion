@@ -7,7 +7,7 @@ class Producto(Base):
     id = Column(Integer, primary_key=True, index=True)
     nombre = Column(String, nullable=False)
     descripcion = Column(String)
-    precio = Column(float, nullable=False)
+    precio = Column(Float, nullable=False)
     cantidad = Column(Integer, nullable=False)
 
     def __init__(self, nombre, descripcion, precio, cantidad):
@@ -17,4 +17,4 @@ class Producto(Base):
         self.cantidad = cantidad
 
     def __repr__(self):
-        return f"<Producto(nombre={self.nombre}, precio={self.precio}, cantidad={self.cantidad}>)"
+        return f"<Producto(nombre={self.nombre}, precio={self.precio}, cantidad={self.cantidad})>"
