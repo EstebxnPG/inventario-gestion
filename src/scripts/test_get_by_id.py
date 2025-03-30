@@ -20,4 +20,4 @@ producto = obtener_producto_por_id(db, producto_id)
 if producto:
     print(f"Producto encontrado: {producto}")
 else:
-    print(f"No se encontró un producto con ID: {producto_id}")
+    print(f"No se encontró un producto con ID: {producto_id}")  
