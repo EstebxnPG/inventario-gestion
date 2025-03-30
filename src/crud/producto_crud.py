@@ -27,3 +27,11 @@ def actualizar_producto(db: Session, producto_id: int, nombre: str, descripcion:
         db.refresh(producto)
         return producto
     return None
+
+def eliminar_producto(db: Session, producto_id: int):
+    producto = db.query(Producto).filter(Producto.id == producto_id).first()
+    if producto:
+        db.delete(producto)
+        db.commit()
+        return True
+    return False
